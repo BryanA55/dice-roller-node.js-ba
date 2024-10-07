@@ -34,4 +34,4 @@ app.get('/api/ping', (req, res) => {
 	res.send('pong');
 });
 
-app.use(express.static(path.join(__dirname));
+app.use(express.static(__dirname));
