@@ -18,13 +18,17 @@ function rollDice(numberOfDice) {
     return diceRolls;
 }
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'index.html'));
+	res.status(200).send("Dice Roller API");
 });
 
 app.get('/roll', (req, res) => {
 	const numberOfDice = parseInt(req.query.numberOfDice) || 1;
 	const results = rollDice(numberOfDice);
 	res.status(200).json({ results });
+});
+app.get('/roll-fail', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.json({ message: 'CORS should fail here!' });
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
@@ -34,4 +38,3 @@ app.get('/api/ping', (req, res) => {
 	res.send('pong');
 });
 
-app.use(express.static(__dirname));
