@@ -2,6 +2,7 @@ const express = require('express');
 app = express();
 
 const cors = require("cors");
+const PORT = process.env.PORT || 3000;
 
 const allowed = ['https://mango-mud-0f2f49210.5.azurestaticapps.net'];
 

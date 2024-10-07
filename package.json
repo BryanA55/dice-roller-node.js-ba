@@ -1,10 +1,8 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
+    "name": "azure-node-dice-roller",
+    "description": "API for Dice roller game using Node and Express.",
+    "version": "1.0.0",
+    "main": "index.js",
     "scripts": {
         "start": "node index.js"
     },
