@@ -1,14 +1,11 @@
 const express = require('express');
-app = express();
-
+const app = express();
 const cors = require("cors");
-const PORT = process.env.PORT || 3000;
-
 const allowed = ['https://mango-mud-0f2f49210.5.azurestaticapps.net'];
 
 app.use(cors({
 	origin: allowed,
-	method: ['GET', 'POST'],
+	methods: ['GET', 'POST'],
 	credentials: true
 }));
 
@@ -21,7 +18,7 @@ function rollDice(numberOfDice) {
     return diceRolls;
 }
 app.get('/', (req, res) => {
-	res.status(200).send('Dice Roller');
+    res.status(200).send('Server Dice Roller API');
 });
 
 app.get('/roll', (req, res) => {
@@ -29,7 +26,10 @@ app.get('/roll', (req, res) => {
 	const results = rollDice(numberOfDice);
 	res.status(200).json({ results });
 });
-
-app.listen(PORT, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
 	console.log('Server is running');
+});
+app.get('/api/ping', (req, res) => {
+	res.send('pong');
 });
