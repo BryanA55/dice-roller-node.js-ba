@@ -1,5 +1,5 @@
-//const express = require('express');
-//const app = express();
+const express = require('express');
+const app = express();
 //const cors = require("cors");
 //const allowed = ['https://mango-mud-0f2f49210.5.azurestaticapps.net'];
 
