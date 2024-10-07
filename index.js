@@ -1,13 +1,13 @@
-const express = require('express');
-const app = express();
-const cors = require("cors");
-const allowed = ['https://mango-mud-0f2f49210.5.azurestaticapps.net'];
+//const express = require('express');
+//const app = express();
+//const cors = require("cors");
+//const allowed = ['https://mango-mud-0f2f49210.5.azurestaticapps.net'];
 
-app.use(cors({
-	origin: allowed,
-	methods: ['GET', 'POST'],
-	credentials: true
-}));
+//app.use(cors({
+//	origin: allowed,
+//	methods: ['GET', 'POST'],
+//	credentials: true
+//}));
 
 function rollDice(numberOfDice) {
     const diceRolls = [];
