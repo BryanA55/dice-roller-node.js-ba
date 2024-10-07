@@ -18,7 +18,7 @@ function rollDice(numberOfDice) {
     return diceRolls;
 }
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'dice-roller-static-ba', 'index.html'));
+	res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/roll', (req, res) => {
@@ -34,4 +34,4 @@ app.get('/api/ping', (req, res) => {
 	res.send('pong');
 });
 
-app.use(express.static(path.join(__dirname, 'dice-roller-static-ba')));
+app.use(express.static(path.join(__dirname));
